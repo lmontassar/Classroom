@@ -1,0 +1,465 @@
+@font-face {
+    font-family: Acme;
+    src: url(fonts/Acme-Goolefonts/Acme-Regular.ttf);
+}
+
+@font-face {
+    font-family: FiraSans;
+    src: url(fonts/FiraSans/FiraSans-Medium.ttf);
+}
+
+
+body {
+    margin: 0px;
+    background: #DAE3E5;
+    margin-bottom: 80px;
+}
+
+/** navbar **/
+header {
+    background: #A1C6EA;
+    box-shadow: 0px 7px 20px 0px #89A6C1;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    font-family: Acme;
+    line-height: normal;
+    letter-spacing: 4px;
+    color: #031432;
+    font-style: normal;
+    font-weight: 400;
+    position: fixed;
+    width: -webkit-fill-available;
+    top: 0;
+    z-index: 1;
+}
+
+.clearfix {
+    height: 80px;
+    transition: 0.4s;
+}
+
+header .name {
+    font-size: 30px;
+}
+
+header ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    font-size: 22px;
+}
+
+header ul li {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+header ul li.active {
+    color: white !important;
+    text-transform: uppercase;
+}
+
+header ul li:first-child {
+    margin-left: 0px;
+}
+
+header .nav-lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 54%;
+}
+
+header .nav-account {
+    display: flex;
+    font-size: 22px;
+}
+
+header .nav-account .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 35px;
+    background: #255AA5;
+    color: #FFF;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+header .nav-account .login:hover {
+    background: #0d3874;
+    transition: 0.4s;
+}
+
+header .nav-account .Signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .nav-account .my-account {
+    display: flex;
+    align-items: center;
+    width: 212px;
+    cursor: pointer;
+}
+
+header .nav-account .my-account div {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    border: 2px solid #FFF;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+header .nav-account .my-account img {
+    width: fit-content;
+    width: -webkit-fill-available;
+}
+
+header .nav-account .logout {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .icon {
+    display: none;
+}
+
+header .sup {
+    display: none;
+}
+
+@media screen and (max-width :1300px) {
+    header .nav-account .my-account {
+        width: 155px;
+    }
+
+    header {
+        padding: 0px 5%;
+    }
+}
+
+@media screen and (max-width :1140px) {
+    header {
+        padding: 0px 5%;
+    }
+
+    header .nav-lists {
+        width: 58%;
+    }
+}
+
+header .span-name {
+    cursor: pointer;
+}
+
+@media screen and (max-width :960px) {
+
+    header.open,
+    .clearfix.open {
+        height: 350px;
+        transition: 0.4s;
+    }
+
+    header {
+        display: block;
+        padding: 0px 10%;
+        height: 60px;
+        /* 350px */
+        padding-top: 25px;
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    .clearfix {
+        height: 60px;
+    }
+
+    header .name {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .nav-lists {
+        margin-top: 50px;
+        display: block;
+        width: auto;
+    }
+
+    header ul {
+        display: block;
+        margin-left: 50px;
+    }
+
+    header .sup {
+        display: block;
+        background-color: #031432;
+        width: 85%;
+        height: 2px;
+        flex-shrink: 0;
+        margin: auto;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    header ul li .icon {
+        margin-right: 25px;
+    }
+
+    header .icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    header .nav-account {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header .nav-account .my-account {
+        width: auto;
+    }
+}
+
+/** home **/
+div.home {
+    margin: auto;
+    margin-top: 50px;
+    height: 1050px;
+    width: 90%;
+}
+
+div.home .first {
+    color: #031432;
+    font-family: Acme;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4px;
+    margin: 90px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.home .search {
+    height: 40px;
+    width: 230px;
+    border-radius: 35px;
+    border: 2px solid #031432;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.home .search input {
+    background: none;
+    border: 0;
+    outline: none;
+    height: 38px;
+    font-size: 18px;
+    width: 170px;
+}
+
+div.home .search svg {
+    cursor: pointer;
+}
+
+div.home .search input::placeholder {
+    font-family: Acme;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.rooms-container {
+    margin: auto;
+    width: 90%;
+    height: 542px;
+    margin-top: 90px;
+    height: 542px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: rgba(218, 227, 229, 0.73);
+    box-shadow: 0px 0px 20px 4px #A1C6EA;
+}
+
+.rooms-container .rooms-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 50px;
+    color: #031432;
+    font-family: Acme;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+.rooms-container .rooms-title span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rooms-container .rooms-title a {
+    font-size: 24px;
+}
+
+.rooms-container .rooms-list {
+    height: 374px;
+    width: 92%;
+    margin: auto;
+    border-radius: 15px;
+    overflow-x: scroll;
+    display: flex;
+}
+
+/* width */
+.rooms-container .rooms-list::-webkit-scrollbar {
+    width: 10px;
+    height: 13px;
+}
+
+/* Handle */
+.rooms-container .rooms-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #255AA5;
+    
+}
+.rooms-container .room {
+    border-radius: 25px;
+    background: #A1C6EA;
+    min-width: 354px;
+    height: 334.877px;
+    overflow: hidden;
+    margin-right: 50px;
+
+    /*typography */
+    color: #031432;
+    font-family: FiraSans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+
+}
+.rooms-container .room:last-child {
+    margin-right: 0px;
+}
+.rooms-container .room .background {
+    width: 354px;
+    height: 175.362px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rooms-container .room .background img {
+    width: -webkit-fill-available;
+}
+.rooms-container .room .profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 3px solid #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 215px;
+    bottom: 60px;
+}
+.rooms-container .room .profile img {
+    width: -webkit-fill-available;
+}
+.rooms-container .room .creator-name {
+    font-size: 22px;
+    position: relative;
+    bottom: 90px;
+    left: 20px;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rooms-container .room .room-name {
+    font-size: 30px;
+    position: relative;
+    bottom: 80px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 76px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width :960px) {
+    div.home .first {
+        margin: 90px 5%;
+    }
+
+    div.home .search {
+        width: 170px;
+    }
+
+    div.home .search input {
+        width: 110px;
+    }
+    .rooms-container .room{
+        min-width: 300px;
+        height: 260px;
+    }
+    .rooms-container .room .background{
+        height: 130px;
+    }
+    .rooms-container .room .profile {
+        width: 70px;
+        height: 70px;
+        left: 190px;
+        bottom: 40px;
+    }
+    .rooms-container .room .creator-name{
+        bottom: 70px;
+    }
+    .rooms-container .room .room-name {
+        font-size: 28px;
+        bottom: 62px;
+        height: 70px;
+    }
+    .rooms-container .rooms-list {
+        height: 285px;
+        width: 88%;  
+    }
+    .rooms-container{
+        height: 444px;
+    }
+    .rooms-container .rooms-title {
+        padding: 45px 25px;
+        font-size: 26px;
+    }
+}
