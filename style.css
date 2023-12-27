@@ -503,4 +503,7 @@ div.home .search input::placeholder {
     .rooms-container {
         height: 400px;
     }
+    .rooms-container .room .room-name {
+        height: 60px;
+    }
 }
