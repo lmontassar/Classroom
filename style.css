@@ -491,6 +491,7 @@ div.home .search input::placeholder {
     .rooms-container .room .creator-name {
         font-size: 20px;
         bottom: 60px;
+        width: 150px;
     }
     .rooms-container .room .room-name {
         font-size: 26px;
