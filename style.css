@@ -463,3 +463,44 @@ div.home .search input::placeholder {
         font-size: 26px;
     }
 }
+
+@media screen and (max-width :421px) {
+    .rooms-container .rooms-title {
+        padding: 45px 25px;
+        font-size: 24px;
+    }
+    div.home .search {
+        width: 160px;
+    }
+    div.home .first {
+        font-size: 38px;
+    }
+    .rooms-container .room {
+        min-width: 270px;
+        height: 240px;
+    }
+    .rooms-container .room .profile {
+        width: 70px;
+        height: 70px;
+        left: 170px;
+        bottom: 40px;
+    }
+    .rooms-container .room .background {
+        height: 115px;
+    }
+    .rooms-container .room .creator-name {
+        font-size: 20px;
+    }
+    .rooms-container .room .room-name {
+        font-size: 26px;
+    }
+    .rooms-container .rooms-list {
+        height: 260px;
+    }
+    .rooms-container .room {
+        margin-right: 20px;
+    }
+    .rooms-container {
+        height: 400px;
+    }
+}
