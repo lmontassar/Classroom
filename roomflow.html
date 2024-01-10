@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: Acme;
+            src: url(fonts/Acme-Goolefonts/Acme-Regular.ttf);
+        }
+
+        .containeer-oroom {
+            margin: auto;
+            margin-top: 50px;
+            width: 900px;
+        }
+
+        /* style of roomflow */
+        .room-info {
+            height: 560px;
+        }
+
+        .containeer-oroom .room-info>.background-image {
+            width: 900px;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .containeer-oroom .room-info>.background-image img {
+            width: fit-content;
+            width: -webkit-fill-available;
+        }
+
+        .containeer-oroom .room-info>.profile-image,
+        .pi {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            /* border: 2px solid white; */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #FFF;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+            position: relative;
+            left: 715px;
+            bottom: 40px;
+        }
+
+        .containeer-oroom .room-info>.profile-image img,
+        .pi img {
+            width: fit-content;
+            width: -webkit-fill-available;
+        }
+
+        .other {
+            position: relative;
+            bottom: 115px;
+            left: 30px;
+            width: 550px;
+            display: grid;
+            /* column-gap: normal; */
+            gap: 10px;
+            grid-template-columns: auto;
+        }
+
+        .room-info .other {
+            color: #031432;
+            font-family: Acme;
+            font-size: 26px;
+            /* font-style: unset; */
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: normal;
+            letter-spacing: 2px;
+            width: 520px;
+            text-wrap: balance;
+        }
+
+        span.subject {
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: #0b3f8d;
+        }
+
+        span.section {
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: #0b3f8d;
+        }
+
+        @media screen and (max-width: 960px) {
+            .room-info {
+                height: 450px;
+            }
+
+            .containeer-oroom {
+                width: 650px;
+            }
+
+            .containeer-oroom .room-info>.background-image {
+                width: 650px;
+            }
+
+            .containeer-oroom .room-info>.background-image {
+                height: 265px;
+            }
+
+            .room-info .other {
+                width: 345px;
+                bottom: 80px;
+                font-size: 21px;
+            }
+
+            span.subject,
+            span.section {
+                font-size: 21px;
+            }
+
+            .containeer-oroom .room-info>.profile-image,
+            .pi {
+                height: 85px;
+                width: 85px;
+                left: 515px;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            .room-info {
+                height: 340px;
+            }
+
+            .containeer-oroom {
+                width: 420px;
+            }
+
+            .containeer-oroom .room-info>.background-image {
+                width: 420px;
+            }
+
+            .containeer-oroom .room-info>.background-image {
+                height: 200px;
+            }
+
+            .room-info .other {
+                width: 250px;
+                bottom: 50px;
+                font-size: 16px;
+                left: 15px;
+                gap: 5px;
+                letter-spacing: 1px;
+            }
+
+            span.subject,
+            span.section {
+                font-size: 16px;
+            }
+
+            .containeer-oroom .room-info>.profile-image,
+            .pi {
+                height: 50px;
+                width: 50px;
+                left: 340px;
+                bottom: 32px;
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+            .room-info {
+                height: 290px;
+            }
+
+            .containeer-oroom {
+                width: 320px;
+            }
+
+            .containeer-oroom .room-info>.background-image {
+                width: 320px;
+            }
+
+            .containeer-oroom .room-info>.background-image {
+                height: 150px;
+            }
+
+            .room-info .other {
+                width: 250px;
+                bottom: 45px;
+                font-size: 16px;
+                left: 15px;
+                gap: 5px;
+                letter-spacing: 1px;
+            }
+
+            span.subject,
+            span.section {
+                font-size: 16px;
+            }
+
+            .creator-name span {
+                font-size: 16px;
+            }
+
+            .creator-name {
+                left: 55px;
+                width: 90px;
+                bottom: 55px;
+            }
+
+            .containeer-oroom .room-info>.profile-image,
+            .pi {
+                height: 50px;
+                width: 50px;
+                left: 240px;
+                bottom: 40px;
+            }
+        }
+
+
+        .room-menu ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            color: #031432;
+            font-family: Acme;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+            gap: 50px;
+            margin: 0;
+            padding: 0;
+            margin-left: 25px;
+        }
+
+        .room-menu ul li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            cursor: pointer;
+
+        }
+
+        .room-menu ul li.active {
+            border-radius: 10px;
+            background: #031432;
+            padding: 0px 30px;
+            color: white;
+            height: 45px;
+        }
+
+        .room-menu {
+            position: sticky;
+            top: 80px;
+            width: 900px;
+            margin: auto;
+            background-color: #bbd1ea;
+            padding: 30px 0px 0px;
+            z-index: 1;
+        }
+
+        .add-flow {
+            border-radius: 15px;
+            background: #A1C6EA;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            padding: 15px 35px;
+        }
+
+        .add-flow .pi {
+            position: initial;
+            height: 50px;
+
+            width: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .add-flow input[type="text"] {
+            color: #2D2D2D;
+            font-family: Acme;
+            font-size: 26px;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 2px;
+            background: none;
+            outline: none;
+            border: none;
+            width: 735px;
+        }
+
+        .containeer-oroom button .icon {
+            width: 20px;
+            height: 14px;
+        }
+
+        .containeer-oroom button {
+            width: 145px;
+            height: 40px;
+            /* border-radius: 15px; */
+            border-radius: 10px;
+            background: #255AA5;
+            outline: none;
+            border: none;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            color: #FFF;
+            font-family: Acme;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .containeer-oroom .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 35px 40px
+        }
+
+        .title span {
+            color: #031432;
+            font-family: Acme;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+        }
+
+
+        @media screen and (max-width: 960px) {
+            .room-menu {
+                position: sticky;
+                top: 80px;
+                width: 650px;
+            }
+
+            .room-menu ul {
+                font-size: 22px;
+            }
+
+            .add-flow {
+                width: fit-content;
+            }
+
+            .add-flow input[type="text"] {
+                width: 490px;
+            }
+
+            .containeer-oroom .title {
+                width: 570px;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            .room-menu {
+                width: 420px;
+            }
+
+            .room-menu ul {
+                font-size: 18px;
+                gap: 30px;
+            }
+
+            .room-menu ul li.active {
+                padding: 0px 25px;
+                height: 40px;
+            }
+
+            .flow {
+                width: 420px;
+            }
+
+            .add-flow {
+                width: fit-content;
+                gap: 20px;
+                height: 45px;
+                width: 370px;
+                padding: 15px 25px;
+            }
+
+            .add-flow .pi {
+                position: initial;
+                height: 45px;
+                width: 45px;
+            }
+
+            .add-flow input[type="text"] {
+                width: 300px;
+                font-size: 17px;
+            }
+
+            .containeer-oroom .title {
+                width: 570px;
+            }
+
+            .containeer-oroom .title {
+                width: 380px;
+                margin: 25px 20px;
+
+            }
+
+            .containeer-oroom .title span {
+                font-size: 20px;
+            }
+
+            .containeer-oroom button {
+                width: 100px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .containeer-oroom button .icon {
+                width: 16px;
+                height: 10px;
+            }
+
+        }
+
+
+        @media screen and (max-width: 460px) {
+            .room-menu {
+                width: 320px;
+            }
+
+            .room-menu ul {
+                font-size: 16px;
+                gap: 30px;
+                margin: 0;
+                justify-content: space-evenly;
+            }
+
+            .room-menu ul li.active {
+                padding: 0px 15px;
+                height: 30px;
+            }
+
+            .flow {
+                width: 320px;
+            }
+
+            .add-flow {
+                width: fit-content;
+                gap: 20px;
+                height: 45px;
+                width: 280px;
+                padding: 10px 20px;
+            }
+
+            .add-flow .pi {
+                position: initial;
+                height: 40px;
+                width: 40px;
+            }
+
+            .add-flow input[type="text"] {
+                width: 205px;
+                font-size: 14px;
+            }
+
+            .containeer-oroom .title {
+                width: 570px;
+            }
+
+            .containeer-oroom .title {
+                width: 280px;
+                margin: 25px 20px;
+
+            }
+
+            .containeer-oroom .title span {
+                font-size: 20px;
+            }
+
+            .containeer-oroom button {
+                width: 100px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .containeer-oroom button .icon {
+                width: 16px;
+                height: 10px;
+            }
+
+        }
+
+        .flow {
+            display: grid;
+            gap: 25px;
+        }
+
+        .flow .file-work {
+            border-radius: 15px;
+            background: #A1C6EA;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+            padding: 15px 35px;
+            cursor: pointer;
+        }
+
+        .flow .file-work .discription {
+            width: 739px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flow .file-work .info {
+            display: grid;
+            grid-template-columns: auto;
+        }
+
+        .flow .file-work .info span.name {
+            position: relative;
+            bottom: 5px;
+            color: #FFF;
+            font-family: Acme;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+        }
+
+        .flow .file-work .info span.work-name {
+            color: #2D2D2D;
+            font-family: Acme;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1px;
+            position: relative;
+            bottom: 5px;
+        }
+
+        .date-status {
+            display: grid;
+            grid-template-columns: auto;
+            text-align: right;
+            color: #031432;
+            font-family: Acme;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+        }
+
+        .flow .file-work .icon .work {
+            width: 45px;
+            height: 45px;
+        }
+
+        .flow .file-work .icon .file {
+            width: 45px;
+            height: 45px;
+        }
+
+        .message {
+            border-radius: 15px;
+            background: #A1C6EA;
+            display: flex;
+            gap: 10px 32px;
+            padding: 15px 35px;
+            flex-wrap: wrap;
+        }
+
+        .message .profile-image.pi {
+            position: initial;
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+        }
+
+        .message .discription {
+            height: 50px;
+            width: 739px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .message span.name {
+            color: white;
+            font-family: Acme;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+        }
+
+        .message span.date {
+            color: #031432;
+            font-family: Acme;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+        }
+
+        .message .c-message span {
+            color: #031432;
+            font-family: Acme;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+            text-wrap: balance;
+        }
+
+        .c-message {
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 960px) {
+            .flow .file-work {
+                width: 580px;
+            }
+
+            .message {
+                width: 580px;
+                gap: 10px 20px;
+            }
+
+            .message .discription {
+                width: 494px;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            .flow .file-work {
+                width: 370px;
+                padding: 15px 25px;
+                height: 40px;
+            }
+
+            .flow .file-work {
+                gap: 10px;
+            }
+
+            .flow .file-work .icon .work {
+                width: 40px;
+                height: 40px;
+            }
+
+            .flow .file-work .discription {
+                width: 340px;
+            }
+
+            .flow .file-work .info span.work-name {
+                color: #2D2D2D;
+                font-family: Acme;
+                font-size: 16px;
+            }
+
+            .flow .file-work .info span.name {
+                font-size: 13px;
+            }
+
+            .date-status, .message span.date {
+                font-size: 10px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .flow .file-work .icon .file {
+                width: 40px;
+                height: 40px;
+            }
+            .message {
+                width: 370px;
+                gap: 10px 20px;
+                padding: 15px 25px;
+            }
+
+            .message .profile-image.pi {
+                width: 45px;
+                height: 45px;
+            }
+
+            .message .discription {
+                width: 301px;
+                height: 45px;
+            }
+
+            .message span.name {
+                font-size: 18px;
+            }
+            .c-message {
+                padding: 5px;
+            }
+            .message .c-message span {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+            
+        }
+
+        @media screen and (max-width: 460px) {
+            .flow .file-work {
+                width: 290px;
+                padding: 15px 15px;
+                height: 35px;
+            }
+            .flow .file-work .icon .work {
+                width: 35px;
+                height: 35px;
+            }
+            .flow .file-work .info span.name {
+                font-size: 12px;
+                letter-spacing: 0;
+            }
+            .flow .file-work .info span.work-name {
+                font-size: 15px;
+                letter-spacing: 0;
+            }
+            .flow .file-work .discription {
+                width: 235px;
+            }
+            .flow .file-work .icon .file {
+                width: 35px;
+                height: 35px;
+            }
+            .date-status, .message span.date {
+                font-size: 10px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .message {
+                width: 290px;
+                gap: 10px 20px;
+                padding: 15px 15px;
+            }
+            .message .discription {
+                width: 221px;
+                height: 40px;
+            }
+            .message span.name {
+                font-size: 16px;
+            }
+            .message .c-message span {
+                font-size: 14px;
+                letter-spacing: 0px;
+            }
+            .message .profile-image.pi {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #BBD1EA ; height: 4000px;">
+
+    <header id="nav">
+        <div class="name">
+            <span class="span-name">
+                CLASSROOM
+            </span>
+            <span class="icon" id="nav-opener"> <svg xmlns="http://www.w3.org/2000/svg" width="46" height="35"
+                    viewBox="0 0 46 35" fill="none">
+                    <rect y="14.3184" width="46" height="7.95455" rx="3.97727" fill="#255AA5" />
+                    <path
+                        d="M0 3.97727C0 1.78069 1.78069 0 3.97727 0H42.0227C44.2193 0 46 1.78069 46 3.97727C46 6.17386 44.2193 7.95455 42.0227 7.95455H3.97727C1.78069 7.95455 0 6.17386 0 3.97727Z"
+                        fill="#255AA5" />
+                    <rect y="27.0454" width="46" height="7.95455" rx="3.97727" fill="#255AA5" />
+                </svg>
+            </span>
+        </div>
+        <div class="nav-lists">
+            <ul>
+                <li class="active">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 576 512">
+                            <path fill="#031432"
+                                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                        </svg>
+                    </span>
+                    Home
+                </li>
+                <li>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                            <path fill="#031432"
+                                d="M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z" />
+                        </svg>
+                    </span>
+                    Rooms
+                </li>
+                <li>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+
+                            <path fill="#031432"
+                                d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                        </svg>
+                    </span>
+                    About
+                </li>
+            </ul>
+            <div class="sup"></div>
+            <div class="nav-account">
+                <!--
+                <div class="login">Login</div>
+                <div class="Signin">Signin</div>
+                -->
+                <div class="my-account">
+                    <div>
+                        <img src="images/user.png">
+                    </div>
+                    Your Profile
+                </div>
+                <div class="logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
+                        <path fill="#031432"
+                            d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-clearfix" class="clearfix"></div>
+
+    <div class="containeer-oroom">
+
+        <div class="header">
+            <div class="room-info">
+                <div class="background-image">
+                    <img src="images/background.jpg" alt="">
+                </div>
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other">
+                    <span class="name">developpement-Angular16 and the society of the worl</span>
+                    <span class="subject"><strong>Created By</strong> Lounissi Montassar</span>
+                    <span class="subject"><strong>Subject:</strong> Angular</span>
+                    <span class="section"><strong>Section:</strong> developpenet web</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-menu">
+        <div class="active-bg"></div>
+        <ul>
+            <li class="active">Flow</li>
+            <li>Work</li>
+            <li>People</li>
+        </ul>
+    </div>
+    <div class="containeer-oroom">
+        <div class="flow">
+            <div class="add-flow">
+                <div class="pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <input type="text" placeholder="Announce something to your class">
+            </div>
+            <div class="title">
+                <span>ordered by date</span>
+                <button>
+                    oldest
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14" fill="none" class="icon">
+                        <path
+                            d="M8.99141 0.512595C9.54926 -0.170865 10.4552 -0.170865 11.0131 0.512595L19.5816 11.0105C20.1395 11.694 20.1395 12.8039 19.5816 13.4874C19.0238 14.1709 18.1178 14.1709 17.56 13.4874L10 4.22515L2.44003 13.4819C1.88218 14.1654 0.976236 14.1654 0.418387 13.4819C-0.139462 12.7985 -0.139462 11.6885 0.418387 11.0051L8.98695 0.507128L8.99141 0.512595Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="file-work">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="work" fill="#031432">
+                        <path
+                            d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z" />
+                    </svg>
+                </div>
+                <div class="discription">
+                    <div class="info">
+                        <span class="name">lastname</span>
+                        <span class="work-name">Work Name</span>
+                    </div>
+                    <div class="date-status">
+                        <span class="date">07/09/2024 23:24</span>
+                        <span class="status">status</span>
+                    </div>
+                </div>
+            </div>
+            <div class="file-work">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="file" fill="#031432">
+                        <path
+                            d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z" />
+                    </svg>
+                </div>
+                <div class="discription">
+                    <div class="info">
+                        <span class="name">lastname</span>
+                        <span class="work-name">Files Name</span>
+                    </div>
+                    <div class="date-status">
+                        <span class="date">07/09/2024 18:15</span>
+                        <span class="status"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <div class="profile-image pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="discription">
+                    <span class="name">lastname</span>
+                    <span class="date">07/09/2024 18:15</span>
+                </div>
+                <div class="c-message">
+                    <span>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi vitae alias, omnis, eos enim
+                        eligendi animi accusantium laborum nihil tempora odit architecto fugiat nobis nostrum autem
+                        expedita quae sapiente vel.
+                        Aperiam, odio. Velit, commodi id repellat numquam omnis, maxime minima, sit nulla totam cumque
+                        odit facere blanditiis et quia laboriosam ducimus tempore sapiente qui. Facilis, cum provident?
+                        Aperiam, suscipit optio!
+                        Nam fuga aliquid nostrum nemo, iusto amet blanditiis quam culpa! Aliquid nesciunt laudantium
+                        eaque ex quod sed doloremque rerum maxime ea! Porro suscipit iusto incidunt itaque sint quasi
+                        excepturi alias.
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+<script>
+    document.getElementById('nav-opener').addEventListener('click', () => {
+        res = document.getElementById('nav').classList.contains('open');
+        if (res) {
+            document.getElementById('nav').classList.remove('open');
+            document.getElementById('nav-clearfix').classList.remove('open');
+        } else {
+            document.getElementById('nav').classList.add('open');
+            document.getElementById('nav-clearfix').classList.add('open');
+        }
+    })
+</script>
+
+</html>

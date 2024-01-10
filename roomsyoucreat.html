@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="nav">
+        <div class="name">
+            <span class="span-name">
+                CLASSROOM
+            </span>
+            <span class="icon" id="nav-opener"> <svg xmlns="http://www.w3.org/2000/svg" width="46" height="35"
+                    viewBox="0 0 46 35" fill="none">
+                    <rect y="14.3184" width="46" height="7.95455" rx="3.97727" fill="#255AA5" />
+                    <path
+                        d="M0 3.97727C0 1.78069 1.78069 0 3.97727 0H42.0227C44.2193 0 46 1.78069 46 3.97727C46 6.17386 44.2193 7.95455 42.0227 7.95455H3.97727C1.78069 7.95455 0 6.17386 0 3.97727Z"
+                        fill="#255AA5" />
+                    <rect y="27.0454" width="46" height="7.95455" rx="3.97727" fill="#255AA5" />
+                </svg>
+            </span>
+        </div>
+        <div class="nav-lists">
+            <ul>
+                <li class="active">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 576 512">
+                            <path fill="#031432"
+                                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                        </svg>
+                    </span>
+                    Home
+                </li>
+                <li>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                            <path fill="#031432"
+                                d="M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z" />
+                        </svg>
+                    </span>
+                    Rooms
+                </li>
+                <li>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+
+                            <path fill="#031432"
+                                d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                        </svg>
+                    </span>
+                    About
+                </li>
+            </ul>
+            <div class="sup"></div>
+            <div class="nav-account">
+                <!--
+                <div class="login">Login</div>
+                <div class="Signin">Signin</div>
+                -->
+                <div class="my-account">
+                    <div>
+                        <img src="images/user.png">
+                    </div>
+                    Your Profile
+                </div>
+                <div class="logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
+                        <path fill="#031432"
+                            d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-clearfix" class="clearfix"></div>
+
+    <div class="home CreateRooms">
+        <div class="first">
+            <div class="title">
+                Rooms you created
+            </div>
+            <div class="addCode" id="open-codeinput">
+                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                    <path fill="#031432"
+                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                </svg>
+                Create
+            </div>
+        </div>
+        <div class="CreateRooms-Liste">
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="room">
+                <div class="background">
+                    <img src="images/background.jpg">
+                </div>
+                <div class="room-name">
+                    <span>Developpement Informatique</span>
+                </div>
+                <div class="edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35" width="12" viewBox="0 0 128 512">
+                        <path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="blur-background" id="bg-blur">
+            <div class="blur-background open" id="close"></div>
+            <div class="BgBlurForm">
+                <div class="title">
+                    <span>Create a new Room</span>
+                </div>
+                <div class="inputs">
+                    <input type="text" placeholder="room name*">
+                    <input type="text" placeholder="section">
+                    <input type="text" placeholder="subject">
+                    <button>Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('nav-opener').addEventListener('click', () => {
+        res = document.getElementById('nav').classList.contains('open');
+        if (res) {
+            document.getElementById('nav').classList.remove('open');
+            document.getElementById('nav-clearfix').classList.remove('open');
+        } else {
+            document.getElementById('nav').classList.add('open');
+            document.getElementById('nav-clearfix').classList.add('open');
+        }
+    })
+    document.getElementById('open-codeinput').addEventListener('click', () => {
+        document.getElementById('bg-blur').classList.add('open');
+    })
+    document.getElementById('close').addEventListener('click', () => {
+        document.getElementById('bg-blur').classList.remove('open');
+    })
+</script>
+
+</html>
