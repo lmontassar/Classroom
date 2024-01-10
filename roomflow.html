@@ -100,7 +100,7 @@
         }
 
         @media screen and (max-width: 960px) {
-            
+
             .room-info {
                 height: 500px;
             }
@@ -347,6 +347,7 @@
             line-height: normal;
             letter-spacing: 2px;
         }
+
         .flow {
             display: grid;
             gap: 25px;
@@ -358,9 +359,11 @@
                 top: 80px;
                 width: 650px;
             }
+
             .flow {
                 gap: 20px;
             }
+
             .room-menu ul {
                 font-size: 22px;
             }
@@ -464,7 +467,7 @@
 
             .flow {
                 width: 320px;
-                gap: 10px ;
+                gap: 10px;
             }
 
             .add-flow {
@@ -513,7 +516,7 @@
 
         }
 
-        
+
 
         .flow .file-work {
             border-radius: 15px;
@@ -689,15 +692,18 @@
                 font-size: 13px;
             }
 
-            .date-status, .message span.date {
+            .date-status,
+            .message span.date {
                 font-size: 10px;
                 font-weight: 600;
                 text-transform: uppercase;
             }
+
             .flow .file-work .icon .file {
                 width: 40px;
                 height: 40px;
             }
+
             .message {
                 width: 370px;
                 gap: 10px 20px;
@@ -717,14 +723,16 @@
             .message span.name {
                 font-size: 18px;
             }
+
             .c-message {
                 padding: 5px;
             }
+
             .message .c-message span {
                 font-size: 14px;
                 letter-spacing: 1px;
             }
-            
+
         }
 
         @media screen and (max-width: 460px) {
@@ -733,54 +741,184 @@
                 padding: 15px 15px;
                 height: 35px;
             }
+
             .flow .file-work .icon .work {
                 width: 35px;
                 height: 35px;
             }
+
             .flow .file-work .info span.name {
                 font-size: 12px;
                 letter-spacing: 0;
             }
+
             .flow .file-work .info span.work-name {
                 font-size: 15px;
                 letter-spacing: 0;
             }
+
             .flow .file-work .discription {
                 width: 235px;
             }
+
             .flow .file-work .icon .file {
                 width: 35px;
                 height: 35px;
             }
-            .date-status, .message span.date {
+
+            .date-status,
+            .message span.date {
                 font-size: 10px;
                 font-weight: 600;
                 text-transform: uppercase;
                 letter-spacing: 1px;
             }
+
             .message {
                 width: 290px;
                 gap: 10px 20px;
                 padding: 15px 15px;
             }
+
             .message .discription {
                 width: 221px;
                 height: 40px;
             }
+
             .message span.name {
                 font-size: 16px;
             }
+
             .message .c-message span {
                 font-size: 14px;
                 letter-spacing: 0px;
             }
+
             .message .profile-image.pi {
                 width: 40px;
                 height: 40px;
             }
         }
-        .dddd{
+
+        .dddd {
             margin-top: 30px;
+        }
+
+        .people-acc {
+            height: 90px;
+            flex-shrink: 0;
+            border-radius: 20px;
+            background: #255AA5;
+            display: flex;
+            align-items: center;
+            padding: 0px 25px;
+            gap: 20px;
+        }
+
+        .people-acc .pi {
+            position: initial;
+            width: 60px;
+            height: 60px;
+            border: 2px white solid;
+        }
+
+        .people-acc .info {
+            display: flex;
+            justify-content: space-between;
+            width: 760px;
+            color: #FFF;
+            font-family: Acme;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2px;
+        }
+
+        .people-acc .discription,
+        .people-acc .status {
+            display: grid;
+            grid-template-columns: auto;
+        }
+
+        .people-acc .status {
+            text-align: right;
+            font-size: 16px;
+            align-items: center;
+        }
+
+        .people-acc .name {
+            font-size: 22px;
+        }
+
+        .people-acc .other-info {
+            color: #d5d5d5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+        }
+
+        @media screen and (max-width: 960px) {
+            .people-acc .info {
+                width: 516px;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            .people-acc .info {
+                width: 286px;
+            }
+
+            .people-acc .name {
+                font-size: 16px;
+            }
+
+            .people-acc .other-info {
+                font-size: 14px;
+            }
+
+            .people-acc .status {
+                font-size: 12px;
+            }
+
+            .people-acc .pi {
+                width: 50px;
+                height: 50px;
+            }
+
+            .people-acc {
+                height: 80px;
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+            .people-acc {
+                border-radius: 15px;
+                padding: 0px 10px;
+            }
+
+            .people-acc .info {
+                width: 236px;
+            }
+
+            .people-acc .name {
+                font-size: 12px;
+            }
+
+            .people-acc .other-info {
+                font-size: 10px;
+            }
+
+            .people-acc .status {
+                font-size: 10px;
+            }
+
+            .people-acc .pi {
+                width: 40px;
+                height: 40px;
+            }
+            .people-acc {
+                height:60px; 
+            }
         }
     </style>
 </head>
@@ -855,7 +993,7 @@
         </div>
     </header>
     <div id="nav-clearfix" class="clearfix"></div>
-
+    <!-- flow and work
     <div class="containeer-oroom">
 
         <div class="header">
@@ -966,6 +1104,141 @@
 
         </div>
     </div>
+-->
+
+    <!-- personne -->
+
+    <div class="containeer-oroom">
+
+        <div class="header">
+            <div class="room-info">
+                <div class="background-image">
+                    <img src="images/background.jpg" alt="">
+                </div>
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other">
+                    <span class="name">developpement-Angular16 and the society of the worl</span>
+                    <span class="subject"><strong>Created By</strong> Lounissi Montassar</span>
+                    <span class="subject"><strong>Subject:</strong> Angular</span>
+                    <span class="section"><strong>Section:</strong> developpenet web</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-menu">
+        <div class="active-bg"></div>
+        <ul>
+            <li>Flow</li>
+            <li>Work</li>
+            <li class="active">People</li>
+        </ul>
+    </div>
+    <div class="containeer-oroom dddd">
+        <div class="flow">
+            <div class="title">
+                <span>teachers(2)</span>
+            </div>
+
+            <div class="people-acc">
+                <div class="pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="discription">
+                        <span class="name">Lounissi Montassar</span>
+                        <span class="other-info">other informations</span>
+                    </div>
+                    <div class="status">
+                        <span class="role">Creator</span>
+                        <span class="date">18/11/2023</span>
+                    </div>
+                </div>
+            </div>
+            <div class="people-acc">
+                <div class="pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="discription">
+                        <span class="name">Lounissi Montassar</span>
+                        <span class="other-info">other informations</span>
+                    </div>
+                    <div class="status">
+                        <span class="role">Teacher</span>
+                        <span class="date">18/11/2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title">
+                <span>students(4)</span>
+            </div>
+            <div class="people-acc">
+                <div class="pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="discription">
+                        <span class="name">Lounissi Montassar</span>
+                        <span class="other-info">other informations</span>
+                    </div>
+                    <div class="status">
+                        <span class="role">Student</span>
+                        <span class="date">18/11/2023</span>
+                    </div>
+                </div>
+            </div>
+            <div class="people-acc">
+                <div class="pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="discription">
+                        <span class="name">Lounissi Montassar</span>
+                        <span class="other-info">other informations</span>
+                    </div>
+                    <div class="status">
+                        <span class="role">Student</span>
+                        <span class="date">18/11/2023</span>
+                    </div>
+                </div>
+            </div>
+            <div class="people-acc">
+                <div class="pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="discription">
+                        <span class="name">Lounissi Montassar</span>
+                        <span class="other-info">other informations</span>
+                    </div>
+                    <div class="status">
+                        <span class="role">Student</span>
+                        <span class="date">18/11/2023</span>
+                    </div>
+                </div>
+            </div>
+            <div class="people-acc">
+                <div class="pi">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="discription">
+                        <span class="name">Lounissi Montassar</span>
+                        <span class="other-info">other informations</span>
+                    </div>
+                    <div class="status">
+                        <span class="role">Student</span>
+                        <span class="date">18/11/2023</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
 </body>
 <script>
